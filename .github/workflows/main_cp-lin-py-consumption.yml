@@ -64,7 +64,7 @@ jobs:
         with:
           app-name: 'cp-lin-py-consumption'
           slot-name: 'Production'
-          package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+          package: 'https://cplinpyconsumptionsa.blob.core.windows.net/deployment/cp-lin-py.zip?sp=r&st=2021-11-18T23:18:27Z&se=2021-11-19T07:18:27Z&spr=https&sv=2020-08-04&sr=b&sig=WKSGgxmZS77xRAAY1914i90PpqmFVf0hoWpUR6vs9KM%3D'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AB187C413E29468EB841FB155D01558D }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true
