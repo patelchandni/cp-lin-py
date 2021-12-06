@@ -11,7 +11,7 @@ variables:
   azureSubscription: 'e8963910-0b0a-41e8-988f-ac8c16024853'
 
   # Function app name
-  functionAppName: 'cp-lin-py-consumption'
+  functionAppName: 'cp-lin-py-dedicated'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
