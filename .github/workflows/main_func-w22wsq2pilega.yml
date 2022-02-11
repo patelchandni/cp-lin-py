@@ -59,7 +59,7 @@ jobs:
           path: .
 
       - name: 'Deploy to Azure Functions'
-        uses: Azure/functions-action@v1
+        uses: patelchandni/functions-action@patelchandni/zipdeployrfp 
         id: deploy-to-function
         with:
           app-name: 'func-w22wsq2pilega'
