@@ -20,6 +20,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        
+      - name: 'Login via Azure CLI'
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Setup Python version
         uses: actions/setup-python@v1
@@ -65,6 +70,6 @@ jobs:
           app-name: 'func-kwgtivwu4hnic'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_71CE6697F4F549FD834818F1887A480C }}
+          #publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_71CE6697F4F549FD834818F1887A480C }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true
